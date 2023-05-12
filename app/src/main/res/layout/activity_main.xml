@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Left side views -->
+    <TextView
+        android:id="@+id/tv_base_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Base"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tip_percent_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_base_lbl"
+        app:layout_constraintTop_toBottomOf="@+id/tv_base_lbl"
+        tools:text="24%" />
+
+    <TextView
+        android:id="@+id/tv_tip_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tip_percent_lbl"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tip_percent_lbl" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tip_lbl"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tip_lbl" />
+
+    <!-- Right side views -->
+    <EditText
+        android:id="@+id/et_base_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:hint="Bill amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_base_lbl"
+        app:layout_constraintStart_toEndOf="@+id/tv_base_lbl"
+        app:layout_constraintTop_toTopOf="@id/tv_base_lbl" />
+
+    <SeekBar
+        android:id="@+id/sb_tip"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tip_percent_lbl"
+        app:layout_constraintStart_toStartOf="@+id/et_base_amount"
+        app:layout_constraintTop_toTopOf="@+id/tv_tip_percent_lbl" />
+
+    <TextView
+        android:id="@+id/tv_tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tip_lbl"
+        app:layout_constraintStart_toStartOf="@+id/sb_tip"
+        app:layout_constraintTop_toTopOf="@+id/tv_tip_lbl"
+        tools:text="99.96" />
+
+    <TextView
+        android:id="@+id/tv_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Total"
+        app:layout_constraintStart_toStartOf="@+id/tv_tip_amount"
+        app:layout_constraintTop_toTopOf="@+id/Total"
+        tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Made with ❤️ by rLapz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tip_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/sb_tip"
+        app:layout_constraintStart_toStartOf="@+id/sb_tip"
+        app:layout_constraintTop_toBottomOf="@+id/sb_tip"
+        tools:text="Acceptable" />
+</androidx.constraintlayout.widget.ConstraintLayout>

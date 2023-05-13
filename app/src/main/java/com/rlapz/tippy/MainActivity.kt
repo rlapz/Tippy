@@ -73,8 +73,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val baseAmount = baseAmountStr.toDouble()
-        val tipPercent = skTip.progress
-        val tipAmount = baseAmount * tipPercent / 100
+        val tipAmount = baseAmount * skTip.progress / 100
         val totalAmount = baseAmount + tipAmount
 
         tvTipAmount.text = "%.2f".format(tipAmount)

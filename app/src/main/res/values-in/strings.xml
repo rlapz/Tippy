@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tippy</string>
+    <string name="made_with">Dibuat dengan ❤️ oleh rLapz</string>
+    <string name="bill_amount">Jumlah tagihan</string>
+    <string name="total">Total</string>
+    <string name="tip">Tip</string>
+    <string name="base">Dari</string>
+</resources>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tippy</string>
+    <string name="made_with">Made with ❤️ by rLapz</string>
+    <string name="bill_amount">Bill amount</string>
+    <string name="total">Total</string>
+    <string name="tip">Tip</string>
+    <string name="base">Base</string>
 </resources>
